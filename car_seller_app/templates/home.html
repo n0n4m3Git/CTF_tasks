@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Сайт продажи машин</title>
+  </head>
+  <body>
+    <style>
+       #welcome_h1_text {
+        font-size: large;
+        font-family: 'Courier New', Courier, monospace;
+    }
+      #list_header {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+      }
+
+      .li_text {
+        float: left;
+        font: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .font_href {
+        display: inline-block;
+        color: rgb(79, 177, 227);
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: #c81414;
+      }
+     .abzac_text{
+        font: bold;
+        font-family: 'Courier New', Courier, monospace; 
+     }
+    </style>
+
+    <header>
+      <ul id="list_header">
+        <li class="li_text">
+          <a class="font_href" href="{{ url_for('home') }}">Главная страница</a>
+        </li>
+        <li class="li_text">
+          <a class="font_href" href="{{ url_for('car_list') }}">Смотреть авто</a>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <div class="div_text">
+        <!-- Здесь будет основное содержимое вашего сайта -->
+        <h1 id="welcome_h1_text">Добро пожаловать на наш сайт, который поможет выбрать ваш будущий автомобиль!</h1>
+        <p class="abzac_text">Перейдите по сслыке <a class="font_href" href="{{ url_for('car_list') }} " Смотреть авто></a> чтобы перейти к выбору машины</p>
+      </div>
+    </main>
+  </body>
+</html>
